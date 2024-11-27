@@ -1,10 +1,8 @@
-scylla-operator:
-  fullnameOverride: scylla-operator
-  image:
-    repository: 945962818829.dkr.ecr.ap-northeast-1.amazonaws.com/scylladb
-    pullPolicy: IfNotPresent
-    tag: "ab180-1.8.1"
-  resources:
-    requests:
-      cpu: 10m
-      memory: 20Mi
+apiVersion: v2
+name: scylla-operator
+version: 0.1.0
+
+dependencies:
+  - name: scylla-operator
+    repository: https://scylla-operator-charts.storage.googleapis.com/stable
+    version: 1.8.0

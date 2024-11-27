@@ -1,6 +1,25 @@
-scylla-operator:
-  fullnameOverride: scylla-operator
-  resources:
-    requests:
-      cpu: 10m
-      memory: 20Mi
+scylla-manager:
+  image:
+    tag: 3.0.2
+  fullnameOverride: scylla-manager
+  scylla:
+    fullnameOverride: scylla-manager
+    racks:
+      - name: manager-rack
+        members: 1
+        storage:
+          capacity: 100Gi
+          storageClassName: gp3
+        resources:
+          limits:
+            cpu: 1
+            memory: 200Mi
+          requests:
+            cpu: 1
+            memory: 200Mi
+    scyllaImage:
+      tag: 5.1.7
+    agentImage:
+      tag: 3.0.2
+  serviceMonitor:
+    create: true
