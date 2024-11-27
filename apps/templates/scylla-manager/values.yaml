@@ -14,10 +14,10 @@ scylla-manager:
         resources:
           limits:
             cpu: 1
-            memory: 200Mi
+            memory: 500Mi
           requests:
             cpu: 1
-            memory: 200Mi
+            memory: 500Mi
     scyllaImage:
       tag: 5.1.7
     agentImage:
