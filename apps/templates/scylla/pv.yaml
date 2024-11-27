@@ -55,3 +55,23 @@ spec:
   claimRef:
     name: data-scylla-production-home-rack-2
     namespace: testbed
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: scylla-manager-rack-0
+  labels:
+    app: scylla-manager-rack-0
+spec:
+  accessModes:
+  - ReadWriteOnce
+  hostPath:
+    path: "/data/scylla/manager-rack-0"
+  capacity:
+    storage: 30Gi
+  persistentVolumeReclaimPolicy: Recycle
+  claimRef:
+    name: data-scylla-manager-manager-dc-manager-rack-0
+    namespace: testbed
