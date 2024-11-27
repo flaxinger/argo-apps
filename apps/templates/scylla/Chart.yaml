@@ -1,0 +1,9 @@
+apiVersion: v2
+name: scylla
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: scylla
+    repository: https://scylla-operator-charts.storage.googleapis.com/stable
+    version: 1.7.4

@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: applicationset
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/flaxinger/argo-apps
+        revision: main
+        directories:
+          - path: "apps/templates/*"
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/flaxinger/argo-apps
+        targetRevision: main
+        path: '{{path}}'
+        helm:
+          valueFiles:
+          - "values.yaml"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argo-apps

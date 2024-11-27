@@ -1,0 +1,35 @@
+scylla:
+  fullnameOverride: scylla
+  scyllaImage:
+    tag: 5.1.7
+  agentImage:
+    tag: 3.0.2
+
+  # Name of datacenter
+  datacenter: "production"
+  automaticOrphanedNodeCleanup: true
+  repairs:
+    - name: "weekly_repair"
+      startDate: "2023-06-10T18:00:00Z" # Sunday 03:00 AM KST
+      interval: "1d"
+
+  # List of racks
+  racks:
+  - name: home-rack
+    # Number of rack members (nodes)
+    members: 3
+    # Storage definition
+    storage:
+      storageClassName: scylladb-local-xfs
+      capacity: 100Gi
+    # Scylla container resource definition
+    resources:
+      limits:
+        cpu: 2
+        memory: 4Gi
+      requests:
+        cpu: 2
+        memory: 4Gi
+    placement:
+      nodeSelector:
+        kubernetes.io/arch: arm64
