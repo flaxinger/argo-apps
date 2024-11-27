@@ -9,7 +9,6 @@ scylla-manager:
         members: 1
         storage:
           capacity: 100Gi
-          storageClassName: gp3
         resources:
           limits:
             cpu: 1
