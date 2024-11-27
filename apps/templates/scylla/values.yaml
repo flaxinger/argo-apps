@@ -3,7 +3,7 @@ scylla:
   scyllaImage:
     tag: 5.1.7
   agentImage:
-    tag: 3.0.2
+    tag: 3.3.0
 
   # Name of datacenter
   datacenter: "production"
