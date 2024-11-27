@@ -21,4 +21,4 @@ scylla-manager:
     agentImage:
       tag: 3.0.2
   serviceMonitor:
-    create: true
+    create: false
