@@ -48,7 +48,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   hostPath:
-    path: "/data/scylla/rack-1"
+    path: "/data/scylla/rack-2"
   capacity:
     storage: 100Gi
   persistentVolumeReclaimPolicy: Recycle
