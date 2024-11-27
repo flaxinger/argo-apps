@@ -33,3 +33,4 @@ scylla:
     placement:
       nodeSelector:
         kubernetes.io/arch: arm64
+  developerMode: true
