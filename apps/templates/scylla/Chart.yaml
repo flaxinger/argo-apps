@@ -5,4 +5,4 @@ version: 0.1.0
 dependencies:
   - name: scylla
     repository: https://scylla-operator-charts.storage.googleapis.com/stable
-    version: 5.0.0
+    version: 1.7.4
