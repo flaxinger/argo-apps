@@ -1,8 +1,18 @@
 apiVersion: v2
+appVersion: 1.8.0
+description: Scylla Manager automates database operations.
+home: https://www.scylladb.com/
+icon: https://www.scylladb.com/wp-content/uploads/scylla-manager.png
+keywords:
+- scylla
+- scylladb
+- scylla-manager
+- scylla-operator
+- operator
+maintainers:
+- email: maciej@scylladb.com
+  name: Maciej Zimnoch
 name: scylla-manager
-version: 0.1.0
-
-dependencies:
-  - name: scylla-manager
-    repository: https://scylla-operator-charts.storage.googleapis.com/stable
-    version: 1.8.0
+sources:
+- https://github.com/scylladb/scylla-operator
+version: v1.8.0
