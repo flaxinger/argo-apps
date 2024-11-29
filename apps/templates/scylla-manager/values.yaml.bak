@@ -1,0 +1,25 @@
+image:
+  tag: 3.3.0
+controllerImage:
+  tag: 1.12.0
+fullnameOverride: scylla-manager
+scylla:
+  fullnameOverride: scylla-manager
+  racks:
+    - name: manager-rack
+      members: 1
+      storage:
+        capacity: 30Gi
+      resources:
+        limits:
+          cpu: 1
+          memory: 500Mi
+        requests:
+          cpu: 1
+          memory: 500Mi
+  scyllaImage:
+    tag: 5.1.7
+  agentImage:
+    tag: 3.3.0
+serviceMonitor:
+  create: false
