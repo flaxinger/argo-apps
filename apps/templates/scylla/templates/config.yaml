@@ -4,8 +4,8 @@ metadata:
   name: scylla-config
 data:
   scylla.yaml: |
-    commitlog_sync_period_in_ms: 120000 # changed
-    read_request_timeout_in_ms: 60000 # changed
-    write_request_timeout_in_ms: 24000 # changed
-    cas_contention_timeout_in_ms: 12000 # changed
+    commitlog_sync_period_in_ms: 120000
+    read_request_timeout_in_ms: 60000 
+    write_request_timeout_in_ms: 24000 
+    cas_contention_timeout_in_ms: 12000
     request_timeout_in_ms: 120000
