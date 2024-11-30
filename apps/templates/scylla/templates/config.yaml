@@ -5,8 +5,10 @@ metadata:
 data:
   scylla.yaml: |
     commitlog_sync_period_in_ms: 120000
+    range_request_timeout_in_ms: 60000
     read_request_timeout_in_ms: 60000 
-    write_request_timeout_in_ms: 24000 
-    cas_contention_timeout_in_ms: 12000
+    write_request_timeout_in_ms: 60000 
+    cas_contention_timeout_in_ms: 60000
     request_timeout_in_ms: 120000
+    counter_write_request_timeout_in_ms: 60000
     enable_parallelized_aggregation: false
