@@ -9,3 +9,4 @@ data:
     write_request_timeout_in_ms: 24000 
     cas_contention_timeout_in_ms: 12000
     request_timeout_in_ms: 120000
+    enable_parallelized_aggregation: false
