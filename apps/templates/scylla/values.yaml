@@ -25,7 +25,7 @@ scylla:
     # Scylla container resource definition
     resources:
       limits:
-        cpu: 2
+        cpu: 3
         memory: 4Gi
       requests:
         cpu: 2
